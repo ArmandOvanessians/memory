@@ -61,3 +61,14 @@ python build_replay_sequences.py \
   --rollout_k 5 \
   --anchors_per_video 5 \
   --save_every 500
+
+Step 5 — Transformer Training
+
+Generate replay sequences using the MHN memory matrix:
+
+python train_transformer.py \                                                                                                              6s
+  --replay_root /Entropy/Projects/memory/CLEV/replay_denser_stride4_stitched \
+  --mode mixed \
+  --out_dir models/transformer_mixed \
+  --epochs 20
+change mode to real: To evaluete transformer trained on real data. 
